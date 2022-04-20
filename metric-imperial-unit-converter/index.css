@@ -49,17 +49,17 @@ table {
 
 /* Custom CSS below */
 
+body, html {
+	height: 100%;
+	display: grid;
+}
+
 body {
-	width: 100vw;
-	height: 100vh;
   font-size: 14px;
   line-height: 20px;
   color: white;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   background-color: #0f161f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .conversion-card, .conversion-card > *, .conversion-group {
@@ -69,7 +69,9 @@ body {
 }
 
 .conversion-card {
-  width: 34rem;
+  max-width: 34rem;
+	width: calc(100vw - 2rem);
+	margin: auto;
   text-align: center;
   gap: 1rem;
 }
