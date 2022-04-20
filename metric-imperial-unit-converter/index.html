@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Metric/Imperial unit conversion</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="conversion-card">
+      <header>
+        <h1 class="title">Metric/Imperial unit conversion</h1>
+        <input id="main-input" name="main-input" value="25" placeholder="25" oninput="convertUnits()" autofocus>
+      </header>
+      <main>
+        <div class="conversion-group">
+          <span class="conversion-header">Length (Meter/Feet)</span>
+          <span class="conversion-result"><span class="user-input">0</span> meters = <span class="output" data-convert-mode="meterFeet">0.000</span> feet | <span class="user-input">0</span> feet = <span class="output" data-convert-mode="feetMeter">0.000</span> meters</span>
+        </div>
+        <div class="conversion-group">
+          <span class="conversion-header">Volume (Liters/Gallons)</span>
+          <span class="conversion-result"><span class="user-input">0</span> liters = <span class="output" data-convert-mode="literGallon">0.000</span> gallons | <span class="user-input">0</span> gallons = <span class="output" data-convert-mode="gallonLiter">0.000</span> liters</span>
+        </div>
+        <div class="conversion-group">
+          <span class="conversion-header">Mass (Kilograms/Pounds)</span>
+          <span class="conversion-result"><span class="user-input">0</span> kilos = <span class="output" data-convert-mode="kiloPound">0.000</span> pounds | <span class="user-input">0</span> pounds = <span class="output" data-convert-mode="poundKilo">0.000</span> kilos</span>
+        </div>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
