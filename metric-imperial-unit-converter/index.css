@@ -93,7 +93,7 @@ body {
   font-weight: 800;
 }
 
-#main-input {
+#conversion-value {
   background: unset;
   border: inherit;
   color: inherit;
@@ -106,11 +106,11 @@ body {
   letter-spacing: -0.05em;
 }
 
-#main-input:focus {
+#conversion-value:focus {
   outline: none;
 }
 
-#main-input::placeholder {
+#conversion-value::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 

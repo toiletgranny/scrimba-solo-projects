@@ -14,7 +14,7 @@ var conversionRates = {
 };
 
 function convertUnits() {
-  let input = document.getElementById("main-input").value;
+  let input = document.querySelector("#conversion-value").value;
 
   let inValues = document.querySelectorAll(".user-input");
   inValues.forEach((inValue) => {
