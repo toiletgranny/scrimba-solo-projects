@@ -1,0 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom CSS below */
+
+:root {
+	--neutral-900: #111827;
+	--neutral-800: #1F2937;
+	--neutral-700: #374151;
+	--neutral-600: #4B5563;
+	--neutral-500: #6B7280;
+	--neutral-400: #9CA3AF;
+	--neutral-300: #D1D5DB;
+	--neutral-200: #E5E7EB;
+	--neutral-100: #F3F4F6;
+	--neutral-50: #F9FAFB;
+	--accent-900: #064E3B;
+	--accent-800: #065F46;
+	--accent-700: #047857;
+	--accent-600: #059669;
+	--accent-500: #10B981;
+	--accent-400: #34D399;
+	--accent-300: #6EE7B7;
+	--accent-200: #A7F3D0;
+	--accent-100: #D1FAE5;
+	--accent-50: #ECFDF5;
+	--font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+	--font-family-mono: 'Space Mono', monospace;
+	--radius: 6px;
+	--transition: .15s ease-out;
+}
+
+::selection {
+	background-color: var(--accent-500);
+	color: white;
+}
+
+*:focus {
+	outline: solid 2px var(--accent-500) !important;
+	outline-offset: 4px;
+}
+
+body, html {
+	height: 100%;
+	display: grid;
+}
+
+body {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+	font-family: var(--font-family-sans-serif);
+  color: var(--neutral-400);
+  background-color: var(--neutral-900);
+	padding: 1rem;
+}
+
+.wrapper {
+	max-width: 28rem;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+  gap: 2.5rem;
+}
+
+.header, .header > div:first-child {
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+	align-items: flex-start;
+  gap: 3rem;
+}
+
+.header > div:first-child {
+	gap: 1.5rem;
+}
+
+h1 {
+	font-size: 2.5rem;
+	line-height: 100%;
+	font-weight: 800;
+	letter-spacing: -0.025em;
+	color: var(--neutral-50);
+}
+
+h1 > .highliht {
+	color: var(--accent-500);
+}
+
+p {
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 140%;
+}
+
+.slider {
+	display: flex;
+	flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+output {
+	color: var(--neutral-50);
+	font-weight: 600;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+  appearance: none;
+	/* outline: none; */
+  margin: 0;
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 999px;
+  background: var(--neutral-700);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background: var(--accent-500);
+	border-radius: 999px;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+	width: 1rem;
+  height: 1rem;
+  background: var(--accent-500);
+	border-radius: 999px;
+  cursor: pointer;
+}
+
+button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1.25rem 0.5rem 1rem;
+	border-radius: var(--radius);
+	background: var(--accent-500);
+	border: none;
+	color: var(--neutral-50);
+	font-size: 1rem;
+	line-height: inherit;
+	font-weight: 600;
+	transition: all var(--transition);
+}
+
+button:hover {
+	transform: scale(1.05);
+	background: var(--accent-400);
+	cursor: pointer;
+}
+
+hr {
+	margin: 0;
+	height: 1px;
+	background: var(--neutral-700);
+	border: 0;
+}
+
+.body {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.password-result {
+	width: 100%;
+	height: 2.5rem;
+	padding: 0;
+	border-radius: var(--radius);
+	background: var(--neutral-800);
+	border: none;
+	color: var(--accent-500);
+	font-size: inherit;
+	font-family: var(--font-family-mono);
+	text-align: center;
+	transition: all var(--transition);
+}
+
+.password-result:not(:disabled) {
+	animation-name: fadeIn;
+	animation-duration: 500ms;
+	animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.password-result::placeholder {
+	color: var(--neutral-900);
+}
+
+.password-result:focus {
+	/* outline: none; */
+}
+
+.password-result:hover:not(:disabled) {
+	transform: scale(1.05);
+	background: var(--neutral-800);
+	cursor: copy;
+}
+
+@keyframes fadeIn {
+	from {
+		/* transform: scale(1.15); */
+		/* opacity: .5; */
+	}
+}
