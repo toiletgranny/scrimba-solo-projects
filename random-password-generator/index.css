@@ -86,24 +86,19 @@ table {
 	outline-offset: 4px;
 }
 
-body, html {
-	height: 100%;
-	display: grid;
-}
-
 body {
   font-size: 0.875rem;
   line-height: 1.5rem;
 	font-family: var(--font-family-sans-serif);
   color: var(--neutral-400);
   background-color: var(--neutral-900);
-	padding: 1rem;
+	padding: 6rem 1rem;
 }
 
 .wrapper {
 	max-width: 28rem;
 	width: 100%;
-	margin: auto;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	align-content: stretch;
@@ -188,7 +183,7 @@ button {
 	gap: 0.5rem;
 	padding: 0.5rem 1.25rem 0.5rem 1rem;
 	border-radius: var(--radius);
-	background: var(--accent-500);
+	background: var(--accent-600);
 	border: none;
 	color: var(--neutral-50);
 	font-size: 1rem;
@@ -199,7 +194,7 @@ button {
 
 button:hover {
 	transform: scale(1.05);
-	background: var(--accent-400);
+	background: var(--accent-500);
 	cursor: pointer;
 }
 

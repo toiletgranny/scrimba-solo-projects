@@ -13,7 +13,7 @@ function generatePasswords() {
   let passwordsContainer = document.querySelector("#generated-passwords");
   passwordsContainer.innerHTML = "";
   for (let i = 0; i < resultsCount; i++) {
-    passwordsContainer.innerHTML += '<input type="text" name="password-result" placeholder="● ● ●" value="' + generatePassword() + '" class="password-result" style="animation-delay: ' + [i]*10 + 'ms" onclick="copyPasswordToClipboard()" readonly>';
+    passwordsContainer.innerHTML += '<input type="text" name="password-result" aria-label="Generated password" value="' + generatePassword() + '" class="password-result" style="animation-delay: ' + [i]*10 + 'ms" onclick="copyPasswordToClipboard()" readonly>';
   }
 }
 

@@ -19,11 +19,11 @@
         <div class="body">
           <div class="slider">
             <label for="results-count">Passwords <output>4</output></label>
-            <input type="range" name="results-count" value="4" min="2" max="8" oninput="generatePasswords(); this.previousElementSibling.childNodes[1].value = this.value">
+            <input type="range" id="results-count" name="results-count" value="4" min="2" max="8" oninput="generatePasswords(); this.previousElementSibling.childNodes[1].value = this.value">
           </div>
           <div class="slider">
             <label for="char-count">Characters <output>10</output></label>
-            <input type="range" name="char-count" value="10" min="8" max="16" oninput="generatePasswords(); this.previousElementSibling.childNodes[1].value = this.value">
+            <input type="range" id="char-count" name="char-count" value="10" min="8" max="16" oninput="generatePasswords(); this.previousElementSibling.childNodes[1].value = this.value">
           </div>
         </div>
         <button type="button" name="button" onclick="generatePasswords()">
@@ -35,10 +35,10 @@
       </div>
       <hr>
       <div class="body" id="generated-passwords">
-        <input type="text" name="password-result" placeholder="● ● ●" class="password-result" disabled>
-        <input type="text" name="password-result" placeholder="● ● ●" class="password-result" disabled>
-        <input type="text" name="password-result" placeholder="● ● ●" class="password-result" disabled>
-        <input type="text" name="password-result" placeholder="● ● ●" class="password-result" disabled>
+        <input type="text" name="password-result" aria-label="Generated password" placeholder="● ● ●" class="password-result" disabled>
+        <input type="text" name="password-result" aria-label="Generated password" placeholder="● ● ●" class="password-result" disabled>
+        <input type="text" name="password-result" aria-label="Generated password" placeholder="● ● ●" class="password-result" disabled>
+        <input type="text" name="password-result" aria-label="Generated password" placeholder="● ● ●" class="password-result" disabled>
       </div>
     </div>
     <script src="index.js"></script>
